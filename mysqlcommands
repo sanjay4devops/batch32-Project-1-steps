@@ -1,0 +1,22 @@
+mysql -h <endpoint>  -u admin -p
+
+mysql -h batman.cjkz84i4bp0t.ap-south-1.rds.amazonaws.com -u admin -pawztqVIW3ePFmLwqT3Ly 
+
+show databases;
+
+create database firstdb;
+
+use firstdb;
+
+CREATE TABLE customers    
+(id int(10),    
+ name varchar(50),    
+ city varchar(50),  
+ PRIMARY KEY (id )    
+);
+
+insert into customers values(101,'rahul','delhi');
+
+DROP TABLE customers;
+
+DROP DATABASE firstdb;
