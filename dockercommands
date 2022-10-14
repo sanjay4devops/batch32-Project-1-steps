@@ -1,0 +1,308 @@
+sudo -i
+
+apt-get update 
+
+apt install docker.io -y
+
+
+
+
+general   OS
+
+win 10  - 4 GB 15 gb -- 25 gb 
+ubuntu    2 gb --5 gb -- 10 gb 
+centos    3 gb   - 6gb   10 gb 
+alpimne 130 mb 
+
+---------------------
+
+Docker OS
+ubuntu 75 mb - 100 mb
+centos 300mb   400mb  
+
+
+----------------------------
+ubuntu 75 mb 
+
+
+5 mb phoyo graph 
+
+5.54MB   alpine OS 
+
+pull -- download image
+run  -- imgae will become container
+run  -- if image is not availe it will download then imgae will become container
+
+docker run hello-world     --- imgae will become container
+
+
+
+docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+ 
+ 
+ -----------------------
+ 
+ Application 1:-     pull and run nginx application with docker..
+
+
+Step 1 Pull nginx inage 
+
+	docker pull nginx
+	
+	
+	docker images 
+	
+	
+docker images
+Step 2 run nginx image and create a container.
+
+	docker run nginx 
+
+Step 3 now the problem is this is web application so need to open a port and user via web browser 
+ 
+Step 4 run a container with port 80 
+
+	docker run -p 80:80 nginx  
+	
+	
+	
+	defaul home page index.html 
+	
+	
+	mkdir -p ~/docker-nginx/html
+    cd ~/docker-nginx/html
+    vi index.html
+	html code pasted 
+
+-d 
+
+docker run -p 80:80 nginx
+docker run -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+	
+
+	
+
+
+	
+	docker tag 1b4b78e14f42 vikas4cloud/mynginxbatch21:latest
+	
+	
+	-----------------------
+	
+sudo -i
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+---------------------
+
+#   $ curl -fsSL https://get.docker.com -o get-docker.sh
+#   $ sh get-docker.sh
+
+ubuntu
+apt install docker.io
+
+
+---------------------
+jenkins/jenkins  -- image   463MB    
+
+binary lob softere - configuaret 
+
+
+1 gb with os 
+bin/lib
+sudo -i
+updated       100
+java      800  
+java setup path 
+port 8080
+adding key to repo 
+
+application
+jenkins software    150
+
+
+
+
+
+
+docker pull jenkins/jenkins
+
+run  -- jenkins/jenkins  image will, bbecome conatiner 
+
+-it     -- interactive mode 
+
+-d   -- detach 
+
+-p 8080:8080  -- port 8080
+
+
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+
+
+---------------------------
+
+Step 1 – Pull ubuntu image from docker hub
+
+docker images
+
+Step 2  - Run the image in interactive mode to make a container
+	docker run -it ubuntu   
+
+Step 3 Come out from the container with exit command 
+
+Step 4 – Start a container 
+	docker start <container ID>
+	
+Step -5  logged into the bash of the  container 
+	docker exec -it <Container ID> bin/bash
+
+Step -6  Your container is ready to play any application try to install GIT in ubuntu container
+apt update 	
+apt install git-all 
+apt install ansible
+apt install python
+
+
+docker run --name docker-nginx ubuntu
+
+
+----------------------------
+NGINX 
+
+OS
+Update
+download nginx -y
+
+
+
+Docker file 
+
+mage (update ubuntu + nginx installed )
+
+FROM ubuntu               ----    OS image           ------------  #-optional owner name
+RUN apt-get update                                      ------------ # any run os level command
+RUN apt-get install  nginx -y                   --------------------- # any run os level command 
+CMD [“echo”,”Image created”]       --------------------   # any application level command
+
+
+image (update ubuntu + nginx installed )
+
+Dockerfile
+
+FROM ubuntu
+MAINTAINER clouddevopshub@gmail.com
+RUN apt-get update
+RUN apt-get install nginx -y
+CMD [“echo”,”Image created”]
+
+jave war jar 
+docker image 
+
+docker build -t mynginxbatch27image .
+
+
+docker images 
+
+docker tag 3009409d2b26 vikas4cloud/mynginxbatch27image:latest
+
+docker pull vikas4cloud/mynginxbatch27image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------
+
+root@batch27:~# history
+    1  ls
+    2  curl -fsSL https://get.docker.com -o get-docker.sh
+    3  ls
+    4  sh get-docker.sh
+    5  docker -v
+    6  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+    7  docker ps
+    8  cat /var/jenkins_home/secrets/initialAdminPassword
+    9  docker ps
+   10  docker exec -it 1ea2ff43cef0 bin/bash
+   11  docker images
+   12  docker ps
+   13  docker stop 1ea2ff43cef0
+   14  docker images
+   15  docker rmi -f jenkins/jenkins
+   16  docker images
+   17  docker run -it ubuntu  
+   18  docker ps 
+   19  docker ps -a
+   20  docker start f8bc24ece3f6
+   21  docker ps 
+   22  docker run --name docker-nginx ubuntu
+   23  docker ps
+   24  docker ps -a
+   25  ls
+   26  rm get-docker.sh 
+   27  ls
+   28  clear
+   29  vi Dockerfile
+   30  cat Dockerfile 
+   31  docker images
+   32  docker rmi ubuntu
+   33  docker rmi -f ubuntu
+   34  docker images
+   35  docker ps
+   36  docker rm -f f8bc24ece3f6
+   37  docker ps
+   38  docker rmi -f 216c552ea5ba
+   39  docker images
+   40  clear
+   41  ls
+   42  docker build -t mynginxbatch27image .
+   43  docker images
+   44  docker tag 3009409d2b26 vikas4cloud/mynginxbatch27image:latest
+   45  docker images
+   46  docker login
+   47  docker push vikas4cloud/mynginxbatch27image:latest
+   48  docker pull vikas4cloud/mynginxbatch27image
+   49  history
