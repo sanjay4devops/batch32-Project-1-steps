@@ -1,0 +1,129 @@
+Following are the steps to create a Shell Script –
+•	
+
+
+Create a file using a text editor such as the vi or any other editor. Name script file with extension .sh
+
+vi abc.sh
+
+
+•	Start the script with #! /bin/sh
+
+#! /bin/sh
+
+•	Write some code/commands.
+
+#! /bin/sh
+free 
+uname -a
+
+•	Save the script file as abc.sh
+
+
+done 
+
+
+•	For executing the script type bash filename.sh
+./abc.sh
+
+----------------------------
+
+#!/bin/bash  
+echo "This is a shell script"  
+ls
+echo "I am done running ls command" 
+
+
+
+-----------------
+
+#!/bin/bash 
+echo "Hello batch27 students"
+echo "My name is $(whoami)"
+echo "Nice to meet you"
+
+-------------
+
+#!/bin/bash  
+echo "This is a monitoring shell script"
+echo "the hostname of this machine is "
+hostname 
+hostname -i
+echo "*******************************************"
+ps
+echo "*******************************************"
+echo "memory used in the machine "
+free
+echo "*******************************************"
+echo "disk used in the machine "
+df -h
+echo "*******************************************"
+echo "the monitoring above information from the machine"  
+SOMEVAR='my shellscript in batch27 learning devops'  
+echo "$SOMEVAR"
+
+-----------------
+
+#!/bin/bash
+# Add two numeric value
+((sum=10-5))
+#Print the result
+echo $sum
+
+
+BODMAS  =-
+
+
+-----------------
+#!/bin/bash
+echo "Enter Your Name"
+read name
+echo "Welcome $name to Linux Learning session"
+
+--------------------
+read for password    -- vikas read -s   -- 
+
+-----------------------------------------------------
+
+
+
+
+#!/bin/bash
+# Write a shell script to display the process running on the system for every
+# 5 seconds, but only for 3 times.
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+# 
+# for loop 3 times
+for r in 1 2 3
+do
+	#see every process on the system
+	echo "**************************** x^x^x ****************************"
+	ps
+	echo "**************************** x^x^x ****************************"
+	#sleep for 5 seconds
+	sleep 5
+        # clean
+done
+
+
+abc()
+
+
+
+
+
+
+
+----------------------------
+
+wget https://tecmint.com/wp-content/scripts/tecmint_monitor.sh
+
+
+
+
+
+
+
+
+
