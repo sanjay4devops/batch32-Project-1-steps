@@ -56,7 +56,7 @@ docker run -d -p 8080:8080 jenkins-docker
 
 make sure port 8080 open in firewall 
  
-docker exec -it f45e94b1bae7 bin/bash
+docker exec -it b452682a0672 bin/bash
 cat /var/jenkins_home/secrets/initialAdminPassword
  
 setup jenkins from the UI...
