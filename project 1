@@ -42,7 +42,9 @@ Run the Jenkins Image
 docker images
 docker ps
 docker container run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock jenkins-docker
-
+=========================need to run this cmd for docker desktop==========================
+docker run --name jenkins -i -d -p 8787:8080 -p 50000:50000 -v //opt/docker/jenkins/jenkins_home:/var/jenkins_home:rw jenkins-docker
+=============================
 
 docker run -d -p 8080:8080 jenkins-docker
 
