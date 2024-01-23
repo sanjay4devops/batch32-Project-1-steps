@@ -13,7 +13,7 @@ apt update
 
 
 
-Vi Dockerfile
+vi Dockerfile
 
 from jenkins/jenkins:lts-jdk11
 USER root
