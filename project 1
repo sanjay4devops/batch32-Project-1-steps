@@ -45,7 +45,7 @@ docker container run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.soc
 =========================need to run this cmd for docker desktop==========================
 Working === docker run --name jenkins -i -d -p 8080:8080 -v //opt/docker/jenkins/jenkins_home:/var/jenkins_home:rw jenkins-docker
 
-Error ===docker run --name jenkins -i -d -p 8787:8080 -p 50000:50000 -v //opt/docker/jenkins/jenkins_home:/var/jenkins_home:rw jenkins-docker
+not working ===docker run --name jenkins -i -d -p 8787:8080 -p 50000:50000 -v //opt/docker/jenkins/jenkins_home:/var/jenkins_home:rw jenkins-docker
 
 =============================
 
